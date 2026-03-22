@@ -6,19 +6,19 @@
 }
 
 :root {
-  --bg: #dce8f8;
-  --bg-alt: #e8f0fb;
+  --bg: #dbeafe;
+  --bg-alt: #e0eef8;
   --bg-card: #ffffff;
-  --text: #0a1628;
-  --text-muted: #5c6b80;
-  --accent: #ff3d6b;
-  --accent-dim: rgba(255, 61, 107, 0.08);
-  --border: rgba(10, 22, 40, 0.1);
-  --border-accent: rgba(255, 61, 107, 0.3);
-  --shadow: 0 2px 20px rgba(10, 22, 40, 0.08);
-  --shadow-hover: 0 8px 32px rgba(10, 22, 40, 0.14);
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --text: #1e3a5f;
+  --text-muted: #4a6d8c;
+  --accent: #2d7dd2;
+  --accent-dim: rgba(45, 125, 210, 0.08);
+  --border: rgba(30, 58, 95, 0.1);
+  --border-accent: rgba(45, 125, 210, 0.3);
+  --shadow: 0 2px 20px rgba(30, 58, 95, 0.08);
+  --shadow-hover: 0 8px 32px rgba(30, 58, 95, 0.14);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
 }
 
 html {
@@ -43,7 +43,7 @@ a {
 
 /* ===== UTILITIES ===== */
 .accent { color: var(--accent); }
-.accent-light { color: rgba(255, 61, 107, 0.15); -webkit-text-stroke: 2px white; }
+.accent-light { color: rgba(45, 125, 210, 0.15); -webkit-text-stroke: 2px white; }
 
 .outline {
   -webkit-text-stroke: 3px var(--text);
@@ -61,7 +61,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem 2.5rem;
-  background: rgba(220, 232, 248, 0.88);
+  background: rgba(219, 234, 254, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -144,7 +144,7 @@ a {
   right: -150px;
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, rgba(255,61,107,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(45,125,210,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -414,7 +414,7 @@ a {
 
 .aside-card.accent-card {
   border-color: var(--border-accent);
-  background: linear-gradient(135deg, rgba(255,61,107,0.04) 0%, white 100%);
+  background: linear-gradient(135deg, rgba(45,125,210,0.04) 0%, white 100%);
 }
 
 .aside-label {
@@ -432,7 +432,7 @@ a {
   line-height: 1.4;
 }
 
-.accent-card .aside-label { color: rgba(255,61,107,0.5); }
+.accent-card .aside-label { color: rgba(45,125,210,0.6); }
 .accent-card .aside-value { color: var(--accent); }
 
 /* ===== PANELS ===== */
@@ -481,7 +481,7 @@ a {
 .panel-card.panel-featured {
   grid-column: span 2;
   border-color: var(--border-accent);
-  background: linear-gradient(135deg, rgba(255,61,107,0.04) 0%, white 55%);
+  background: linear-gradient(135deg, rgba(45,125,210,0.05) 0%, white 55%);
 }
 
 .panel-card.panel-featured::after {
@@ -557,38 +557,66 @@ a {
   color: var(--text-muted);
 }
 
-/* ===== COLLABORATIONS ===== */
+/* ===== COLLABORATIONS (FLIP TILES) ===== */
 .collab-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.collab-card {
-  background: var(--bg-card);
-  border: 1.5px solid var(--border);
+.flip-tile {
+  perspective: 1000px;
+  height: 240px;
+  cursor: pointer;
+}
+
+.flip-tile-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-tile:hover .flip-tile-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-tile-front,
+.flip-tile-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 1.25rem;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-}
-
-.collab-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-}
-
-.collab-logo-area {
-  padding: 2.5rem 2rem;
-  background: var(--bg-alt);
-  border-bottom: 1.5px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 110px;
+}
+
+.flip-tile-front {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.flip-tile-front:hover {
+  border-color: var(--border-accent);
+}
+
+.flip-tile-back {
+  background: var(--accent);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 1.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-hover);
 }
 
 .collab-wordmark {
@@ -597,6 +625,7 @@ a {
   font-size: 1.8rem;
   color: var(--text);
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .collab-wordmark.rtc {
@@ -605,39 +634,37 @@ a {
   line-height: 1.2;
 }
 
-.collab-info {
-  padding: 1.6rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  flex: 1;
-}
-
-.collab-name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text);
-}
-
-.collab-desc {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
-
-.collab-tag {
-  display: inline-flex;
-  align-self: flex-start;
-  font-size: 0.68rem;
-  font-weight: 700;
+.flip-hint {
+  font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-dim);
-  padding: 0.3rem 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.flip-collab-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.18);
+  padding: 0.25rem 0.65rem;
   border-radius: 2rem;
-  margin-top: 0.25rem;
+}
+
+.flip-collab-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.flip-collab-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.65;
 }
 
 .collab-note {
@@ -660,7 +687,7 @@ a {
 /* ===== PRESS ===== */
 .press-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
   margin-bottom: 2rem;
 }
@@ -906,10 +933,6 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .press-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .speaking-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -964,6 +987,10 @@ a {
 
   .press-grid {
     grid-template-columns: 1fr;
+  }
+
+  .collab-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero-links {
