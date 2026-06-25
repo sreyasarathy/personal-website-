@@ -429,6 +429,53 @@ a {
 
 .about-text p:last-child { margin-bottom: 0; }
 
+.about-photo-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.about-headshot-wrap {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+
+.about-headshot {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.fun-facts-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.fun-fact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.fun-fact-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.fun-fact-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+}
+
 .about-aside {
   display: flex;
   flex-direction: column;
@@ -1333,6 +1380,14 @@ a {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .about-photo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .fun-facts-photos {
+    grid-template-columns: 1fr 1fr;
   }
 
   .panels-grid {
