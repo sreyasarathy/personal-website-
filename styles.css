@@ -1123,16 +1123,26 @@ a {
   border-color: white;
 }
 
+.teardown-tile-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: white;
+  border-bottom: 1.5px solid rgba(255,255,255,0.4);
+  padding-bottom: 0.15rem;
+  transition: border-color 0.2s;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.teardown-tile-link:hover {
+  border-color: white;
+}
+
 .teardowns-footer {
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-}
-
-.teardowns-sub {
-  font-size: 0.92rem;
-  color: var(--text-muted);
 }
 
 /* ===== THINGS I'VE SHIPPED ===== */
