@@ -129,6 +129,16 @@
         <span class="di-label">About</span>
       </button>
 
+      <button class="desktop-icon" data-open="sideprojects" role="listitem" aria-label="Open Side Projects">
+        <div class="di-folder di-folder--green">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body">
+            <span class="di-folder-emoji">&#128161;</span>
+          </div>
+        </div>
+        <span class="di-label">Side Projects</span>
+      </button>
+
     </div>
 
     <!-- ============ WINDOWS ============ -->
@@ -535,6 +545,61 @@
       </div>
     </div>
 
+    <!-- SIDE PROJECTS WINDOW -->
+    <div class="window" id="win-sideprojects" role="dialog" aria-modal="true" aria-label="Side Projects">
+      <div class="win-titlebar" data-drag="sideprojects">
+        <div class="win-controls">
+          <button class="win-btn win-close" data-close="sideprojects" aria-label="Close"></button>
+          <button class="win-btn win-min" aria-label="Minimize"></button>
+          <button class="win-btn win-max" aria-label="Maximize"></button>
+        </div>
+        <span class="win-title">Side Projects</span>
+      </div>
+      <div class="win-body">
+        <div class="win-section-label">Side Projects</div>
+        <h2 class="win-heading">Built because<br/><span class="wa">the gap was real.</span></h2>
+
+        <div class="shipped-grid">
+          <div class="shipped-card shipped-card-featured">
+            <div class="shipped-meta">
+              <span class="shipped-tag">Community Product</span>
+            </div>
+            <h3 class="shipped-title">Recruiting Buddy Initiative</h3>
+            <p class="shipped-problem"><strong>Problem:</strong> Panels give inspiration. They don't give one-on-one support at 11pm when someone's stuck on their resume and their interview is tomorrow morning.</p>
+            <p class="shipped-solution"><strong>What I built:</strong> A peer-matching system inside the community, connecting students who need targeted recruiting help with people a step ahead who've been there. Zero infrastructure cost, high signal.</p>
+            <div class="shipped-metrics">
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">150</span>
+                <span class="shipped-metric-label">registrations (capped)</span>
+              </div>
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">0<span class="accent">→</span>1</span>
+                <span class="shipped-metric-label">built from scratch</span>
+              </div>
+            </div>
+          </div>
+          <div class="shipped-card">
+            <div class="shipped-meta">
+              <span class="shipped-tag">Event Product</span>
+            </div>
+            <h3 class="shipped-title">Sreya's Virtual Panel Series</h3>
+            <p class="shipped-problem"><strong>Problem:</strong> Early-career students needed access to people already in the room, but the existing rooms weren't built for them, and the ones that were didn't exist yet.</p>
+            <p class="shipped-solution"><strong>What I built:</strong> A virtual panel series, free and open, featuring speakers from Apple, Amazon, IBM, Starbucks, Ford, Deloitte.</p>
+            <div class="shipped-metrics">
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">1,500<span class="accent">+</span></span>
+                <span class="shipped-metric-label">registrations</span>
+              </div>
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">12</span>
+                <span class="shipped-metric-label">panels hosted</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div><!-- /desktop -->
 
   <!-- DOCK -->
@@ -574,6 +639,13 @@
           <div class="di-folder-body"><span class="di-folder-emoji">&#9786;</span></div>
         </div>
         <span class="dock-label">About</span>
+      </button>
+      <button class="dock-item" data-open="sideprojects" aria-label="Side Projects">
+        <div class="dock-icon di-folder di-folder--green">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body"><span class="di-folder-emoji">&#128161;</span></div>
+        </div>
+        <span class="dock-label">Side Projects</span>
       </button>
       <div class="dock-divider"></div>
       <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="dock-item dock-item--link" aria-label="Substack">

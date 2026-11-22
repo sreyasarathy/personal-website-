@@ -28,6 +28,7 @@
   --folder-teal: #1e9e82;
   --folder-orange: #d97706;
   --folder-pink: #c2446e;
+  --folder-green: #2d9d50;
 }
 
 html {
@@ -337,6 +338,9 @@ button { background: none; border: none; cursor: pointer; font: inherit; padding
 
 .di-folder--pink .di-folder-tab  { background: color-mix(in srgb, var(--folder-pink) 85%, #000); }
 .di-folder--pink .di-folder-body { background: var(--folder-pink); }
+
+.di-folder--green .di-folder-tab  { background: color-mix(in srgb, var(--folder-green) 85%, #000); }
+.di-folder--green .di-folder-body { background: var(--folder-green); }
 
 .di-folder-emoji { color: rgba(255,255,255,0.9); }
 
