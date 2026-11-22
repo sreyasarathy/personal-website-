@@ -1,0 +1,73 @@
+name: Add Teardown Tile
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Article title (shown on front of tile)'
+        required: true
+      url:
+        description: 'Full Substack URL'
+        required: true
+      hook:
+        description: 'Hook text (1-2 sentences shown on back of tile)'
+        required: true
+
+jobs:
+  add-tile:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/build-personal-website-UGC9d
+
+      - name: Add tile to index.html
+        env:
+          TITLE: ${{ github.event.inputs.title }}
+          URL: ${{ github.event.inputs.url }}
+          HOOK: ${{ github.event.inputs.hook }}
+        run: |
+          python3 - <<'EOF'
+          import os, re
+
+          title = os.environ['TITLE']
+          url = os.environ['URL']
+          hook = os.environ['HOOK']
+
+          new_tile = f"""
+                  <div class="flip-tile">
+                    <div class="flip-tile-inner">
+                      <div class="flip-tile-front">
+                        <span class="collab-wordmark" style="font-size:1rem; line-height:1.4; text-align:center;">{title}</span>
+                        <span class="flip-hint">hover to read more</span>
+                      </div>
+                      <div class="flip-tile-back">
+                        <p class="flip-collab-desc">{hook}</p>
+                        <a href="{url}" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+                      </div>
+                    </div>
+                  </div>
+          """
+
+          with open('index.html', 'r') as f:
+              content = f.read()
+
+          # Insert before the closing </div> of the teardowns grid
+          marker = '      </div>\n\n      <div class="teardowns-footer">'
+          content = content.replace(marker, new_tile + '\n' + marker)
+
+          with open('index.html', 'w') as f:
+              f.write(content)
+
+          print(f"Added tile: {title}")
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add index.html
+          git commit -m "Add teardown tile: ${{ github.event.inputs.title }}"
+          git push origin claude/build-personal-website-UGC9d
