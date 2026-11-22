@@ -24,457 +24,659 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="#hero" class="nav-logo-link">
-      <img src="./Sreya Headshot.jpeg" alt="Sreya Sarathy" class="nav-logo-img" />
-    </a>
-    <div class="nav-links">
-      <a href="#teardowns">Teardowns</a>
-      <a href="#shipped">Work</a>
-      <a href="#about">About</a>
-      <a href="#collab">Collabs</a>
-      <a href="#connect" class="nav-cta">Work with me</a>
+  <!-- MENU BAR -->
+  <div class="menubar">
+    <div class="menubar-left">
+      <span class="menubar-brand">Sreya Sarathy</span>
+      <span class="menubar-sep"></span>
+      <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="menubar-item">Writing</a>
+      <span class="menubar-item" data-open="speaking">Speaking</span>
+      <a href="mailto:hisreyasarathy@gmail.com" class="menubar-item">Contact</a>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-tag">Software Engineer &amp; Product Thinker</div>
-        <h1 class="hero-name">
-          <span class="hero-name-line">SREYA</span>
-          <span class="hero-name-line accent-name">SARATHY</span>
-        </h1>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">1,500<span class="accent">+</span></span>
-            <span class="stat-label">registrations</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">12</span>
-            <span class="stat-label">panels hosted</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">0<span class="accent">→</span>1</span>
-            <span class="stat-label">products shipped</span>
-          </div>
-        </div>
-        <div class="hero-links">
-          <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="btn-primary">Read the teardowns &rarr;</a>
-          <a href="#shipped" class="btn-secondary">See what I've shipped &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCT TEARDOWNS -->
-  <section class="section section-alt" id="teardowns">
-    <div class="section-inner">
-      <div class="section-label">How I Think About Product</div>
-      <div class="teardowns-header">
-        <h2 class="section-heading">Product teardowns.<br /><span class="accent">Real takes.</span></h2>
-        <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="btn-secondary teardowns-all-link">All pieces &rarr;</a>
-      </div>
-      <p class="section-sub">I write about product decisions, the ones that worked, the ones that didn't, and what the gap tells you about how people actually use software.</p>
-
-      <div class="collab-grid">
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark" style="font-size:1rem; line-height:1.4; text-align:center;">LinkedIn Knows Everything About Strangers and Nothing About My Friends</span>
-              <span class="flip-hint">hover to read more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">It took me 12 days to find out my friend got promoted, buried under strangers posting "comment BUILD for the prompt."</p>
-              <a href="https://sreyasarathy.substack.com/p/linkedin-knows-everything-about-strangers" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark" style="font-size:1rem; line-height:1.4; text-align:center;">The Feature BeReal Never Built That Could've Saved It</span>
-              <span class="flip-hint">hover to read more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">BeReal had the right insight and millions of users, then slowly dismantled every decision that made it work. Here's what I'd have shipped instead of DMs and a Discovery tab.</p>
-              <a href="https://sreyasarathy.substack.com/p/the-feature-bereal-never-built-that" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark" style="font-size:1rem; line-height:1.4; text-align:center;">Why Is a 23 Year Old Still Using Snapchat?</span>
-              <span class="flip-hint">hover to read more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">Instagram has had Close Friends since 2018, so why was I still opening Snapchat in 2026? Because one list can't hold five kinds of friends, and that gap is a feature waiting to be built.</p>
-              <a href="https://sreyasarathy.substack.com/p/why-is-a-23-year-old-still-using" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark" style="font-size:1rem; line-height:1.4; text-align:center;">The Default Grouping Gap</span>
-              <span class="flip-hint">hover to read more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">I wrote three teardowns before realizing they were secretly the same one: the product sorts people one way, you want them sorted another. The framework I now run on every product I look at.</p>
-              <a href="https://sreyasarathy.substack.com/p/the-default-grouping-gap" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark" style="font-size:1rem; line-height:1.4; text-align:center;">I Got Ghosted Over AirPods and Redesigned the App Store</span>
-              <span class="flip-hint">hover to read more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">A $179 pair of AirPods, one missing receipt, and an App Store that decided I wasn't a real customer. Here's the redesign I would've shipped.</p>
-              <a href="https://sreyasarathy.substack.com/p/i-got-ghosted-over-airpods-and-redesigned" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="teardowns-footer">
-        <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="btn-primary">Subscribe &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- THINGS I'VE SHIPPED -->
-  <section class="section" id="shipped">
-    <div class="section-inner">
-      <div class="section-label">Things I've Shipped</div>
-      <h2 class="section-heading">Built because<br /><span class="accent">the gap was real.</span></h2>
-
-      <div class="shipped-grid">
-
-        <div class="shipped-card shipped-card-featured">
-          <div class="shipped-meta">
-            <span class="shipped-tag">Community Product</span>
-          </div>
-          <h3 class="shipped-title">Recruiting Buddy Initiative</h3>
-          <p class="shipped-problem"><strong>Problem:</strong> Panels give inspiration. They don't give one-on-one support at 11pm when someone's stuck on their resume and their interview is tomorrow morning.</p>
-          <p class="shipped-solution"><strong>What I built:</strong> A peer-matching system inside the community, connecting students who need targeted recruiting help with people a step ahead who've been there. Zero infrastructure cost, high signal.</p>
-          <div class="shipped-metrics">
-            <div class="shipped-metric">
-              <span class="shipped-metric-num">150</span>
-              <span class="shipped-metric-label">registrations (capped)</span>
-            </div>
-            <div class="shipped-metric">
-              <span class="shipped-metric-num">0<span class="accent">→</span>1</span>
-              <span class="shipped-metric-label">built from scratch</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="shipped-card">
-          <div class="shipped-meta">
-            <span class="shipped-tag">Event Product</span>
-          </div>
-          <h3 class="shipped-title">Sreya's Virtual Panel Series</h3>
-          <p class="shipped-problem"><strong>Problem:</strong> Early-career students needed access to people already in the room, but the existing rooms weren't built for them, and the ones that were didn't exist yet.</p>
-          <p class="shipped-solution"><strong>What I built:</strong> A virtual panel series, free and open, featuring speakers from Apple, Amazon, IBM, Starbucks, Ford, Deloitte.</p>
-          <div class="shipped-metrics">
-            <div class="shipped-metric">
-              <span class="shipped-metric-num">1,500<span class="accent">+</span></span>
-              <span class="shipped-metric-label">registrations</span>
-            </div>
-            <div class="shipped-metric">
-              <span class="shipped-metric-num">12</span>
-              <span class="shipped-metric-label">panels hosted</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section section-alt" id="about">
-    <div class="section-inner">
-      <div class="section-label">About</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-heading">Product thinker<br /><span class="accent">who ships.</span></h2>
-          <p>
-            I graduated from UW–Madison with a double major in Computer Science &amp; Data Science. Software engineer by profession, but product builder and thinker by default. I see gaps in how products are designed, in how communities are built, in who gets access to what, and my instinct is to close them.
-          </p>
-        </div>
-        <div class="about-aside">
-          <div class="aside-card">
-            <span class="aside-label">Role</span>
-            <span class="aside-value">Software Engineer @ Fortune 500</span>
-          </div>
-          <div class="aside-card">
-            <span class="aside-label">Education</span>
-            <span class="aside-value">B.S. Computer Science &amp; Data Science, UW-Madison</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-photo-row">
-        <div class="about-headshot-wrap">
-          <img src="Sreya Headshot.jpeg" alt="Sreya Sarathy" class="about-headshot" />
-        </div>
-        <div class="fun-facts">
-          <div class="section-label" style="margin-bottom:1rem;">Fun facts</div>
-          <div class="fun-facts-photos">
-            <div class="fun-fact-card">
-              <img src="matcha.webp" alt="Matcha lover" class="fun-fact-img" />
-              <span class="fun-fact-label">Avid matcha lover</span>
-            </div>
-            <div class="fun-fact-card">
-              <img src="budapest.webp" alt="Travelling in Budapest" class="fun-fact-img" />
-              <span class="fun-fact-label">Avid traveller</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORKED WITH -->
-  <section class="section" id="collab">
-    <div class="section-inner">
-      <div class="section-label">Collaborations</div>
-      <h2 class="section-heading">Partnered<br /><span class="accent">with me.</span></h2>
-      <p class="section-sub">Companies and organizations I've worked with directly, panels, content, and speaking.</p>
-
-      <div class="collab-grid">
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark">huntr.co</span>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <h3 class="flip-collab-name">Huntr</h3>
-              <p class="flip-collab-desc">Partnered on "Breaking Into Tech Hiring," giving students the real playbook for navigating the 2026 job market, from applications to offers.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark rtc">Rewriting<br/>the Code</span>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <h3 class="flip-collab-name">Rewriting the Code</h3>
-              <p class="flip-collab-desc">Content creator partner. Shared my story with the RTC community on finding your space in tech.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark cherielle">cherielle</span>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <h3 class="flip-collab-name">Cherielle</h3>
-              <p class="flip-collab-desc">Spoke at Cherielle's hackathon (Mar 2026). Workshop: "How to Stay You in CS When Everyone Around You Looks Different." For high school girls finding their footing in tech.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark">The Grace Hopper Celebration 2026</span>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">Speaking at GHC26. More details coming soon.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark">SJSU Hoplite</span>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <p class="flip-collab-desc">Conducted a workshop on the transition from academia to the workforce.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <a href="https://www.joinwilla.com/" target="_blank" rel="noopener" class="collab-wordmark">willa</a>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <h3 class="flip-collab-name">Willa</h3>
-              <p class="flip-collab-desc">Ambassador for Willa, Women Innovating, Learning &amp; Leading AI.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-tile">
-          <div class="flip-tile-inner">
-            <div class="flip-tile-front">
-              <span class="collab-wordmark">girlcon 2026</span>
-              <span class="flip-hint">hover to learn more</span>
-            </div>
-            <div class="flip-tile-back">
-              <h3 class="flip-collab-name">GirlCon 2026</h3>
-              <p class="flip-collab-desc">Led a workshop called "What Even Is the Cloud" at GirlCon 2026.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="collab-note">Interested in partnering? <a href="#connect" class="inline-link">Let's talk.</a></p>
-    </div>
-  </section>
-
-  <!-- PRESS -->
-  <section class="section section-alt" id="press">
-    <div class="section-inner">
-      <div class="section-label">Press &amp; Features</div>
-      <h2 class="section-heading">The word<br /><span class="accent">is getting out.</span></h2>
-
-      <div class="press-grid">
-
-        <a href="https://cdis.wisc.edu/sreya-sarathy-25-talks-mentorship/" class="press-card press-card-live" target="_blank" rel="noopener">
-          <div class="press-outlet">UW-Madison CDIS</div>
-          <h3 class="press-headline">Sreya Sarathy &rsquo;25 Talks Mentorship</h3>
-          <div class="press-date">2025</div>
-          <div class="press-arrow">&rarr;</div>
-        </a>
-
-        <a href="https://cdis.wisc.edu/cdis-student-spotlight-sreya-sarathy/" class="press-card press-card-live" target="_blank" rel="noopener">
-          <div class="press-outlet">UW-Madison CDIS</div>
-          <h3 class="press-headline">CDIS Student Spotlight: Sreya Sarathy</h3>
-          <div class="press-date">2025</div>
-          <div class="press-arrow">&rarr;</div>
-        </a>
-
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7308183028554416129/" class="press-card press-card-live" target="_blank" rel="noopener">
-          <div class="press-outlet">LinkedIn</div>
-          <h3 class="press-headline">Get to know Sreya</h3>
-          <div class="press-date">2025</div>
-          <div class="press-arrow">&rarr;</div>
-        </a>
-
-        <a href="https://www.youtube.com/watch?v=IuTcAaK790I" class="press-card press-card-live" target="_blank" rel="noopener">
-          <div class="press-outlet">Podcast Feature</div>
-          <h3 class="press-headline">Featured as a guest. Listen to the full episode.</h3>
-          <div class="press-date">2025</div>
-          <div class="press-arrow">&rarr;</div>
-        </a>
-
-      </div>
-
-      <p class="press-note">For press inquiries, <a href="#connect" class="inline-link">reach out directly</a>.</p>
-    </div>
-  </section>
-
-  <!-- SPEAKING -->
-  <section class="section" id="speaking">
-    <div class="section-inner">
-      <div class="section-label">Speaking</div>
-      <div class="speaking-grid">
-        <div class="speaking-left">
-          <h2 class="section-heading">Let's put a<br /><span class="accent">mic on it.</span></h2>
-          <p>
-            I speak about early-career tech, product thinking, and what it looks like to build things when the room you need doesn't exist yet. University panels, company ERGs, conferences. I show up prepared and I don't do generic keynotes.
-          </p>
-          <a href="#connect" class="btn-primary">Book me &rarr;</a>
-        </div>
-        <div class="speaking-right">
-          <div class="topic-card">
-            <span class="topic-icon">&#9670;</span>
-            <div>
-              <h4>How to Stay You in CS When Everyone Around You Looks Different</h4>
-              <p>Staying grounded in who you are while navigating a space that wasn't built for you.</p>
-            </div>
-          </div>
-          <div class="topic-card">
-            <span class="topic-icon">&#9670;</span>
-            <div>
-              <h4>I Spent Two Years Hiding in CS. One Email Changed Everything.</h4>
-              <p>How I went from skipping every opportunity to a fully-funded GHC trip, 6,000+ LinkedIn connections, and building a community I wish I'd had.</p>
-            </div>
-          </div>
-          <div class="topic-card">
-            <span class="topic-icon">&#9670;</span>
-            <div>
-              <h4>I Thought Everyone Was Better Than Me (Until I Saw Their Screens).</h4>
-              <p>The moment I saw everyone else's Stack Overflow tabs and realized nobody actually has it together. They just weren't talking about it.</p>
-            </div>
-          </div>
-          <div class="topic-card">
-            <span class="topic-icon">&#9670;</span>
-            <div>
-              <h4>From Panels to Peers: How I Built a Recruiting Support Ecosystem That Scales.</h4>
-              <p>Why inspiration alone doesn't get people hired, and how I built a 1,500-person community from scratch, while working full time, with no team and no blueprint.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONNECT -->
-  <section class="section section-connect" id="connect">
-    <div class="section-inner connect-inner">
-      <div class="section-label light">Let's Connect</div>
-      <h2 class="section-heading light">Got something<br /><span class="accent-light">good in mind?</span></h2>
-      <p class="connect-sub">
-        For press, collaborations, speaking, and panel inquiries. I read every email.
-      </p>
-      <a href="mailto:hisreyasarathy@gmail.com" class="connect-email">
-        hisreyasarathy@gmail.com
+    <div class="menubar-right">
+      <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="menubar-icon" title="Substack">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
       </a>
-      <div class="connect-socials">
-        <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="social-link light">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-          Substack
-        </a>
-        <a href="https://instagram.com/sreya.sarathy" target="_blank" rel="noopener" class="social-link light">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          Instagram
-        </a>
-        <a href="https://linkedin.com/in/sreyasarathy" target="_blank" rel="noopener" class="social-link light">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
+      <a href="https://linkedin.com/in/sreyasarathy" target="_blank" rel="noopener" class="menubar-icon" title="LinkedIn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <span class="menubar-time" id="menubar-time"></span>
+    </div>
+  </div>
+
+  <!-- DESKTOP -->
+  <div class="desktop" id="desktop">
+
+    <!-- WALLPAPER GRID (subtle) -->
+    <div class="desktop-wallpaper" aria-hidden="true"></div>
+
+    <!-- HERO TEXT (left side) -->
+    <div class="desktop-hero">
+      <div class="dh-tag">Software Engineer &amp; Product Thinker</div>
+      <h1 class="dh-name">
+        <span class="dh-name-line">SREYA</span>
+        <span class="dh-name-line dh-accent">SARATHY</span>
+      </h1>
+      <div class="dh-stats">
+        <div class="dh-stat">
+          <span class="dh-stat-num">1,500<span class="dh-accent">+</span></span>
+          <span class="dh-stat-label">registrations</span>
+        </div>
+        <div class="dh-stat-div"></div>
+        <div class="dh-stat">
+          <span class="dh-stat-num">12</span>
+          <span class="dh-stat-label">panels hosted</span>
+        </div>
+        <div class="dh-stat-div"></div>
+        <div class="dh-stat">
+          <span class="dh-stat-num">0<span class="dh-accent">→</span>1</span>
+          <span class="dh-stat-label">products shipped</span>
+        </div>
+      </div>
+      <p class="dh-hint">Click a folder to explore &darr;</p>
+    </div>
+
+    <!-- DESKTOP ICONS (right side) -->
+    <div class="desktop-icons" role="list">
+
+      <button class="desktop-icon" data-open="writing" role="listitem" aria-label="Open Writing">
+        <div class="di-folder di-folder--blue">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body">
+            <span class="di-folder-emoji">&#9998;</span>
+          </div>
+        </div>
+        <span class="di-label">Writing</span>
+      </button>
+
+      <button class="desktop-icon" data-open="speaking" role="listitem" aria-label="Open Speaking">
+        <div class="di-folder di-folder--purple">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body">
+            <span class="di-folder-emoji">&#127908;</span>
+          </div>
+        </div>
+        <span class="di-label">Speaking</span>
+      </button>
+
+      <button class="desktop-icon" data-open="brands" role="listitem" aria-label="Open Brands">
+        <div class="di-folder di-folder--teal">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body">
+            <span class="di-folder-emoji">&#10022;</span>
+          </div>
+        </div>
+        <span class="di-label">Brands</span>
+      </button>
+
+      <button class="desktop-icon" data-open="work" role="listitem" aria-label="Open Work">
+        <div class="di-folder di-folder--orange">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body">
+            <span class="di-folder-emoji">&#128187;</span>
+          </div>
+        </div>
+        <span class="di-label">Work</span>
+      </button>
+
+      <button class="desktop-icon" data-open="about" role="listitem" aria-label="Open About">
+        <div class="di-folder di-folder--pink">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body">
+            <span class="di-folder-emoji">&#9786;</span>
+          </div>
+        </div>
+        <span class="di-label">About</span>
+      </button>
+
+    </div>
+
+    <!-- ============ WINDOWS ============ -->
+
+    <!-- WRITING WINDOW -->
+    <div class="window" id="win-writing" role="dialog" aria-modal="true" aria-label="Writing">
+      <div class="win-titlebar" data-drag="writing">
+        <div class="win-controls">
+          <button class="win-btn win-close" data-close="writing" aria-label="Close"></button>
+          <button class="win-btn win-min" aria-label="Minimize"></button>
+          <button class="win-btn win-max" aria-label="Maximize"></button>
+        </div>
+        <span class="win-title">Writing &mdash; sreyasarathy.substack.com</span>
+      </div>
+      <div class="win-body">
+        <div class="win-section-label">How I think about product</div>
+        <div class="win-heading-row">
+          <h2 class="win-heading">Product teardowns.<br/><span class="wa">Real takes.</span></h2>
+          <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="win-btn-link">All pieces &rarr;</a>
+        </div>
+        <p class="win-sub">I write about product decisions, the ones that worked, the ones that didn't, and what the gap tells you about how people actually use software.</p>
+
+        <div class="win-flip-grid">
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">LinkedIn Knows Everything About Strangers and Nothing About My Friends</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">It took me 12 days to find out my friend got promoted, buried under strangers posting "comment BUILD for the prompt."</p>
+                <a href="https://sreyasarathy.substack.com/p/linkedin-knows-everything-about-strangers" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">The Feature BeReal Never Built That Could've Saved It</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">BeReal had the right insight and millions of users, then slowly dismantled every decision that made it work. Here's what I'd have shipped instead of DMs and a Discovery tab.</p>
+                <a href="https://sreyasarathy.substack.com/p/the-feature-bereal-never-built-that" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">Why Is a 23 Year Old Still Using Snapchat?</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">Instagram has had Close Friends since 2018, so why was I still opening Snapchat in 2026? Because one list can't hold five kinds of friends, and that gap is a feature waiting to be built.</p>
+                <a href="https://sreyasarathy.substack.com/p/why-is-a-23-year-old-still-using" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">The Default Grouping Gap</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">I wrote three teardowns before realizing they were secretly the same one: the product sorts people one way, you want them sorted another. The framework I now run on every product I look at.</p>
+                <a href="https://sreyasarathy.substack.com/p/the-default-grouping-gap" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">I Got Ghosted Over AirPods and Redesigned the App Store</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">I spent 20 minutes waiting for a stranger who never showed up. Then I redesigned the product that let it happen.</p>
+                <a href="https://sreyasarathy.substack.com/p/i-got-ghosted-over-airpods-and-redesigned" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">AI Lied to Me with Full Confidence</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">AI told me something wrong with the same tone it uses when it's right. Here's what that tells you about the product gap nobody's talking about.</p>
+                <a href="https://sreyasarathy.substack.com/p/ai-lied-to-me-with-full-confidence" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:0.95rem;line-height:1.4;text-align:center;">I Stopped Paying for Chegg in 2023. So Did Everyone Else.</span>
+                <span class="flip-hint">hover to read more</span>
+              </div>
+              <div class="flip-tile-back">
+                <p class="flip-collab-desc">Chegg went from a $14.7 billion company to $115 million in four years. Their own employees saw ChatGPT coming and asked to build a defense. Leadership said no.</p>
+                <a href="https://sreyasarathy.substack.com/p/i-stopped-paying-for-chegg-in-2023" target="_blank" rel="noopener" class="teardown-tile-link">Read the piece &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="win-footer-row">
+          <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="btn-primary">Subscribe on Substack &rarr;</a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <span>&copy; 2026 Sreya Sarathy</span>
-    <span>sreyasarathy.com</span>
-  </footer>
+    <!-- SPEAKING WINDOW -->
+    <div class="window" id="win-speaking" role="dialog" aria-modal="true" aria-label="Speaking">
+      <div class="win-titlebar" data-drag="speaking">
+        <div class="win-controls">
+          <button class="win-btn win-close" data-close="speaking" aria-label="Close"></button>
+          <button class="win-btn win-min" aria-label="Minimize"></button>
+          <button class="win-btn win-max" aria-label="Maximize"></button>
+        </div>
+        <span class="win-title">Speaking</span>
+      </div>
+      <div class="win-body">
+        <div class="speaking-win-layout">
+          <div class="speaking-win-left">
+            <div class="win-section-label">Speaking</div>
+            <h2 class="win-heading">Let's put a<br/><span class="wa">mic on it.</span></h2>
+            <p class="win-sub" style="margin-bottom:1.5rem;">I speak about early-career tech, product thinking, and what it looks like to build things when the room you need doesn't exist yet. University panels, company ERGs, conferences. I show up prepared and I don't do generic keynotes.</p>
+
+            <div class="venues-block">
+              <div class="venues-label">Where I've spoken</div>
+              <div class="venues-list">
+                <span class="venue-chip">Grace Hopper Celebration 2026</span>
+                <span class="venue-chip">Cherielle Hackathon</span>
+                <span class="venue-chip">SJSU Hoplite</span>
+                <span class="venue-chip">GirlCon 2026</span>
+              </div>
+            </div>
+
+            <a href="mailto:hisreyasarathy@gmail.com" class="btn-primary" style="margin-top:2rem;">Book me &rarr;</a>
+          </div>
+          <div class="speaking-win-right">
+            <div class="topic-card">
+              <span class="topic-icon">&#9670;</span>
+              <div>
+                <h4>How to Stay You in CS When Everyone Around You Looks Different</h4>
+                <p>Staying grounded in who you are while navigating a space that wasn't built for you.</p>
+              </div>
+            </div>
+            <div class="topic-card">
+              <span class="topic-icon">&#9670;</span>
+              <div>
+                <h4>I Spent Two Years Hiding in CS. One Email Changed Everything.</h4>
+                <p>How I went from skipping every opportunity to a fully-funded GHC trip, 6,000+ LinkedIn connections, and building a community I wish I'd had.</p>
+              </div>
+            </div>
+            <div class="topic-card">
+              <span class="topic-icon">&#9670;</span>
+              <div>
+                <h4>I Thought Everyone Was Better Than Me (Until I Saw Their Screens).</h4>
+                <p>The moment I saw everyone else's Stack Overflow tabs and realized nobody actually has it together. They just weren't talking about it.</p>
+              </div>
+            </div>
+            <div class="topic-card">
+              <span class="topic-icon">&#9670;</span>
+              <div>
+                <h4>From Panels to Peers: How I Built a Recruiting Support Ecosystem That Scales.</h4>
+                <p>Why inspiration alone doesn't get people hired, and how I built a 1,500-person community from scratch, while working full time, with no team and no blueprint.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRANDS WINDOW -->
+    <div class="window" id="win-brands" role="dialog" aria-modal="true" aria-label="Brands">
+      <div class="win-titlebar" data-drag="brands">
+        <div class="win-controls">
+          <button class="win-btn win-close" data-close="brands" aria-label="Close"></button>
+          <button class="win-btn win-min" aria-label="Minimize"></button>
+          <button class="win-btn win-max" aria-label="Maximize"></button>
+        </div>
+        <span class="win-title">Brands</span>
+      </div>
+      <div class="win-body">
+        <div class="win-section-label">Collaborations</div>
+        <h2 class="win-heading">Partnered<br/><span class="wa">with me.</span></h2>
+        <p class="win-sub">Companies and organizations I've worked with directly, through content, partnerships, and speaking.</p>
+
+        <div class="win-flip-grid win-flip-grid--4">
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark" style="font-size:1.5rem;letter-spacing:0.04em;">brick</span>
+                <span class="flip-hint">hover to learn more</span>
+              </div>
+              <div class="flip-tile-back">
+                <h3 class="flip-collab-name">Brick</h3>
+                <p class="flip-collab-desc">Brand partner. Collaborated on content and community initiatives.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark rtc">Rewriting<br/>the Code</span>
+                <span class="flip-hint">hover to learn more</span>
+              </div>
+              <div class="flip-tile-back">
+                <h3 class="flip-collab-name">Rewriting the Code</h3>
+                <p class="flip-collab-desc">Content creator partner. Shared my story with the RTC community on finding your space in tech.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <span class="collab-wordmark">huntr.co</span>
+                <span class="flip-hint">hover to learn more</span>
+              </div>
+              <div class="flip-tile-back">
+                <h3 class="flip-collab-name">Huntr</h3>
+                <p class="flip-collab-desc">Partnered on "Breaking Into Tech Hiring," giving students the real playbook for navigating the 2026 job market, from applications to offers.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-tile">
+            <div class="flip-tile-inner">
+              <div class="flip-tile-front">
+                <a href="https://www.joinwilla.com/" target="_blank" rel="noopener" class="collab-wordmark">willa</a>
+                <span class="flip-hint">hover to learn more</span>
+              </div>
+              <div class="flip-tile-back">
+                <h3 class="flip-collab-name">Willa</h3>
+                <p class="flip-collab-desc">Ambassador for Willa, Women Innovating, Learning &amp; Leading AI.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-top:1rem;">Interested in partnering? <a href="mailto:hisreyasarathy@gmail.com" style="color:var(--accent);text-decoration:underline;">Let's talk.</a></p>
+      </div>
+    </div>
+
+    <!-- WORK WINDOW -->
+    <div class="window" id="win-work" role="dialog" aria-modal="true" aria-label="Work">
+      <div class="win-titlebar" data-drag="work">
+        <div class="win-controls">
+          <button class="win-btn win-close" data-close="work" aria-label="Close"></button>
+          <button class="win-btn win-min" aria-label="Minimize"></button>
+          <button class="win-btn win-max" aria-label="Maximize"></button>
+        </div>
+        <span class="win-title">Work</span>
+      </div>
+      <div class="win-body">
+        <div class="win-section-label">Work</div>
+        <h2 class="win-heading">Engineer by day,<br/><span class="wa">builder by default.</span></h2>
+
+        <div class="work-role-card">
+          <div class="work-role-left">
+            <div class="work-role-eyebrow">Current Role</div>
+            <div class="work-role-title">Software Engineer</div>
+            <div class="work-role-company">Fortune 500</div>
+            <p class="work-role-desc">I write production code, ship features, and think about systems. But the product brain doesn't clock out at 5pm.</p>
+          </div>
+          <div class="work-role-right">
+            <div class="work-pill">Full-stack engineering</div>
+            <div class="work-pill">0 &rarr; 1 products</div>
+            <div class="work-pill">Systems thinking</div>
+          </div>
+        </div>
+
+        <div class="win-section-label" style="margin-top:2.5rem;">Things I've built</div>
+
+        <div class="shipped-grid">
+          <div class="shipped-card shipped-card-featured">
+            <div class="shipped-meta">
+              <span class="shipped-tag">Community Product</span>
+            </div>
+            <h3 class="shipped-title">Recruiting Buddy Initiative</h3>
+            <p class="shipped-problem"><strong>Problem:</strong> Panels give inspiration. They don't give one-on-one support at 11pm when someone's stuck on their resume and their interview is tomorrow morning.</p>
+            <p class="shipped-solution"><strong>What I built:</strong> A peer-matching system inside the community, connecting students who need targeted recruiting help with people a step ahead who've been there. Zero infrastructure cost, high signal.</p>
+            <div class="shipped-metrics">
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">150</span>
+                <span class="shipped-metric-label">registrations (capped)</span>
+              </div>
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">0<span class="accent">→</span>1</span>
+                <span class="shipped-metric-label">built from scratch</span>
+              </div>
+            </div>
+          </div>
+          <div class="shipped-card">
+            <div class="shipped-meta">
+              <span class="shipped-tag">Event Product</span>
+            </div>
+            <h3 class="shipped-title">Sreya's Virtual Panel Series</h3>
+            <p class="shipped-problem"><strong>Problem:</strong> Early-career students needed access to people already in the room, but the existing rooms weren't built for them, and the ones that were didn't exist yet.</p>
+            <p class="shipped-solution"><strong>What I built:</strong> A virtual panel series, free and open, featuring speakers from Apple, Amazon, IBM, Starbucks, Ford, Deloitte.</p>
+            <div class="shipped-metrics">
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">1,500<span class="accent">+</span></span>
+                <span class="shipped-metric-label">registrations</span>
+              </div>
+              <div class="shipped-metric">
+                <span class="shipped-metric-num">12</span>
+                <span class="shipped-metric-label">panels hosted</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT WINDOW -->
+    <div class="window" id="win-about" role="dialog" aria-modal="true" aria-label="About">
+      <div class="win-titlebar" data-drag="about">
+        <div class="win-controls">
+          <button class="win-btn win-close" data-close="about" aria-label="Close"></button>
+          <button class="win-btn win-min" aria-label="Minimize"></button>
+          <button class="win-btn win-max" aria-label="Maximize"></button>
+        </div>
+        <span class="win-title">About</span>
+      </div>
+      <div class="win-body">
+        <div class="about-win-layout">
+          <div class="about-win-text">
+            <div class="win-section-label">About</div>
+            <h2 class="win-heading">Product thinker<br/><span class="wa">who ships.</span></h2>
+            <p style="font-size:1.02rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.5rem;">
+              I graduated from UW-Madison with a double major in Computer Science &amp; Data Science. Software engineer by profession, but product builder and thinker by default. I see gaps in how products are designed, in how communities are built, in who gets access to what, and my instinct is to close them.
+            </p>
+            <div class="about-cards-row">
+              <div class="aside-card">
+                <span class="aside-label">Role</span>
+                <span class="aside-value">Software Engineer @ Fortune 500</span>
+              </div>
+              <div class="aside-card">
+                <span class="aside-label">Education</span>
+                <span class="aside-value">B.S. CS &amp; Data Science, UW-Madison</span>
+              </div>
+            </div>
+
+            <div class="win-section-label" style="margin-top:2rem;">Press &amp; Features</div>
+            <div class="press-list">
+              <a href="https://cdis.wisc.edu/sreya-sarathy-25-talks-mentorship/" class="press-row" target="_blank" rel="noopener">
+                <span class="press-row-outlet">UW-Madison CDIS</span>
+                <span class="press-row-title">Sreya Sarathy '25 Talks Mentorship</span>
+                <span class="press-row-arrow">&rarr;</span>
+              </a>
+              <a href="https://cdis.wisc.edu/cdis-student-spotlight-sreya-sarathy/" class="press-row" target="_blank" rel="noopener">
+                <span class="press-row-outlet">UW-Madison CDIS</span>
+                <span class="press-row-title">CDIS Student Spotlight: Sreya Sarathy</span>
+                <span class="press-row-arrow">&rarr;</span>
+              </a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7308183028554416129/" class="press-row" target="_blank" rel="noopener">
+                <span class="press-row-outlet">LinkedIn</span>
+                <span class="press-row-title">Get to know Sreya</span>
+                <span class="press-row-arrow">&rarr;</span>
+              </a>
+              <a href="https://www.youtube.com/watch?v=IuTcAaK790I" class="press-row" target="_blank" rel="noopener">
+                <span class="press-row-outlet">Podcast Feature</span>
+                <span class="press-row-title">Featured as a guest. Listen to the full episode.</span>
+                <span class="press-row-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-win-photos">
+            <div class="about-headshot-wrap" style="margin-bottom:1.5rem;">
+              <img src="Sreya Headshot.jpeg" alt="Sreya Sarathy" class="about-headshot" />
+            </div>
+            <div class="win-section-label">Fun facts</div>
+            <div class="fun-facts-photos" style="margin-top:0.75rem;">
+              <div class="fun-fact-card">
+                <img src="matcha.webp" alt="Matcha lover" class="fun-fact-img" />
+                <span class="fun-fact-label">Avid matcha lover</span>
+              </div>
+              <div class="fun-fact-card">
+                <img src="budapest.webp" alt="Travelling in Budapest" class="fun-fact-img" />
+                <span class="fun-fact-label">Avid traveller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /desktop -->
+
+  <!-- DOCK -->
+  <div class="dock" role="navigation" aria-label="Dock">
+    <div class="dock-inner">
+      <button class="dock-item" data-open="writing" aria-label="Writing">
+        <div class="dock-icon di-folder di-folder--blue">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body"><span class="di-folder-emoji">&#9998;</span></div>
+        </div>
+        <span class="dock-label">Writing</span>
+      </button>
+      <button class="dock-item" data-open="speaking" aria-label="Speaking">
+        <div class="dock-icon di-folder di-folder--purple">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body"><span class="di-folder-emoji">&#127908;</span></div>
+        </div>
+        <span class="dock-label">Speaking</span>
+      </button>
+      <button class="dock-item" data-open="brands" aria-label="Brands">
+        <div class="dock-icon di-folder di-folder--teal">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body"><span class="di-folder-emoji">&#10022;</span></div>
+        </div>
+        <span class="dock-label">Brands</span>
+      </button>
+      <button class="dock-item" data-open="work" aria-label="Work">
+        <div class="dock-icon di-folder di-folder--orange">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body"><span class="di-folder-emoji">&#128187;</span></div>
+        </div>
+        <span class="dock-label">Work</span>
+      </button>
+      <button class="dock-item" data-open="about" aria-label="About">
+        <div class="dock-icon di-folder di-folder--pink">
+          <div class="di-folder-tab"></div>
+          <div class="di-folder-body"><span class="di-folder-emoji">&#9786;</span></div>
+        </div>
+        <span class="dock-label">About</span>
+      </button>
+      <div class="dock-divider"></div>
+      <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="dock-item dock-item--link" aria-label="Substack">
+        <div class="dock-icon dock-icon--social">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        </div>
+        <span class="dock-label">Substack</span>
+      </a>
+      <a href="https://linkedin.com/in/sreyasarathy" target="_blank" rel="noopener" class="dock-item dock-item--link" aria-label="LinkedIn">
+        <div class="dock-icon dock-icon--social">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <span class="dock-label">LinkedIn</span>
+      </a>
+      <a href="mailto:hisreyasarathy@gmail.com" class="dock-item dock-item--link" aria-label="Email">
+        <div class="dock-icon dock-icon--social">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <span class="dock-label">Email</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- OVERLAY (behind open windows) -->
+  <div class="win-overlay" id="win-overlay"></div>
+
+  <script>
+    // ---- CLOCK ----
+    function updateClock() {
+      const el = document.getElementById('menubar-time');
+      if (!el) return;
+      const now = new Date();
+      el.textContent = now.toLocaleString('en-US', { weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
+    }
+    updateClock();
+    setInterval(updateClock, 10000);
+
+    // ---- WINDOWS ----
+    let zTop = 200;
+
+    function openWindow(id) {
+      const win = document.getElementById('win-' + id);
+      if (!win) return;
+      document.querySelectorAll('.window').forEach(w => w.classList.remove('focused'));
+      win.classList.add('open', 'focused');
+      win.style.zIndex = ++zTop;
+      document.getElementById('win-overlay').classList.add('active');
+      // mark dock/desktop icon active
+      document.querySelectorAll('[data-open="' + id + '"]').forEach(el => el.classList.add('active'));
+    }
+
+    function closeWindow(id) {
+      const win = document.getElementById('win-' + id);
+      if (!win) return;
+      win.classList.remove('open', 'focused');
+      document.querySelectorAll('[data-open="' + id + '"]').forEach(el => el.classList.remove('active'));
+      // hide overlay if no windows open
+      if (!document.querySelector('.window.open')) {
+        document.getElementById('win-overlay').classList.remove('active');
+      }
+    }
+
+    // Click-to-open
+    document.querySelectorAll('[data-open]').forEach(el => {
+      el.addEventListener('click', () => openWindow(el.dataset.open));
+    });
+
+    // Click-to-close
+    document.querySelectorAll('[data-close]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeWindow(el.dataset.close);
+      });
+    });
+
+    // Clicking overlay closes all windows
+    document.getElementById('win-overlay').addEventListener('click', () => {
+      document.querySelectorAll('.window.open').forEach(w => {
+        const id = w.id.replace('win-', '');
+        closeWindow(id);
+      });
+    });
+
+    // Bring window to front on click
+    document.querySelectorAll('.window').forEach(win => {
+      win.addEventListener('mousedown', () => {
+        document.querySelectorAll('.window').forEach(w => w.classList.remove('focused'));
+        win.classList.add('focused');
+        win.style.zIndex = ++zTop;
+      });
+    });
+
+    // Keyboard: Escape closes top window
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const top = [...document.querySelectorAll('.window.open')].sort((a,b) => parseInt(b.style.zIndex||0) - parseInt(a.style.zIndex||0))[0];
+        if (top) closeWindow(top.id.replace('win-', ''));
+      }
+    });
+
+    // Menubar speaking link
+    document.querySelector('[data-open="speaking"]').addEventListener('click', () => openWindow('speaking'));
+  </script>
 
 </body>
 </html>
