@@ -504,7 +504,7 @@ button { background: none; border: none; cursor: pointer; font: inherit; padding
 }
 
 .win-flip-grid--4 {
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* ===== FLIP TILES ===== */
