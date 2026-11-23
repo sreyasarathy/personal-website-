@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0W4NP6W55Y"></script>
   <script>
@@ -52,14 +52,14 @@
     <!-- DESKTOP ICONS -->
     <div class="desktop-icons" role="list">
 
-      <button class="desktop-icon" data-open="about" role="listitem" aria-label="Open About">
+      <button class="desktop-icon" data-open="about" role="listitem" aria-label="Open Features">
         <div class="di-folder di-folder--pink">
           <div class="di-folder-tab"></div>
           <div class="di-folder-body">
-            <span class="di-folder-emoji">&#9786;</span>
+            <span class="di-folder-emoji">&#128240;</span>
           </div>
         </div>
-        <span class="di-label">About</span>
+        <span class="di-label">Features</span>
       </button>
 
       <button class="desktop-icon" data-open="writing" role="listitem" aria-label="Open Writing">
@@ -134,7 +134,7 @@
           <h2 class="win-heading">Product teardowns.<br/><span class="wa">Real takes.</span></h2>
           <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="win-btn-link">All pieces &rarr;</a>
         </div>
-        <p class="win-sub">I write product teardowns on the side, pulling apart apps I use and arguing for what I'd do differently. One of them is now being handed out in a college-level English composition class, which I genuinely did not see coming.</p>
+        <p class="win-sub">I write product teardowns, pulling apart apps I use and arguing for what I'd do differently. One of them is now being handed out in a college-level English composition class, which I genuinely did not see coming.</p>
 
         <div class="win-flip-grid win-flip-grid--4">
 
@@ -383,76 +383,34 @@
       </div>
     </div>
 
-    <!-- ABOUT WINDOW -->
-    <div class="window" id="win-about" role="dialog" aria-modal="true" aria-label="About">
+    <!-- FEATURES WINDOW -->
+    <div class="window" id="win-about" role="dialog" aria-modal="true" aria-label="Features">
       <div class="win-titlebar" data-drag="about">
         <div class="win-controls">
           <button class="win-btn win-close" data-close="about" aria-label="Close"></button>
           <button class="win-btn win-min" aria-label="Minimize"></button>
           <button class="win-btn win-max" aria-label="Maximize"></button>
         </div>
-        <span class="win-title">About</span>
+        <span class="win-title">Features</span>
       </div>
       <div class="win-body">
-        <div class="about-win-layout">
-          <div class="about-win-text">
-            <div class="win-section-label">About</div>
-            <h2 class="win-heading">Product thinker<br/><span class="wa">who ships.</span></h2>
-            <p style="font-size:1.02rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.5rem;">
-              I graduated from UW-Madison with a double major in Computer Science &amp; Data Science. Software engineer by profession, but product builder and thinker by default. I see gaps in how products are designed, in how communities are built, in who gets access to what, and my instinct is to close them.
-            </p>
-            <div class="about-cards-row">
-              <div class="aside-card">
-                <span class="aside-label">Role</span>
-                <span class="aside-value">Software Engineer @ Fortune 500</span>
-              </div>
-              <div class="aside-card">
-                <span class="aside-label">Education</span>
-                <span class="aside-value">B.S. CS &amp; Data Science, UW-Madison</span>
-              </div>
-            </div>
-
-            <div class="win-section-label" style="margin-top:2rem;">Press &amp; Features</div>
-            <div class="press-list">
-              <a href="https://cdis.wisc.edu/sreya-sarathy-25-talks-mentorship/" class="press-row" target="_blank" rel="noopener">
-                <span class="press-row-outlet">UW-Madison CDIS</span>
-                <span class="press-row-title">Sreya Sarathy '25 Talks Mentorship</span>
-                <span class="press-row-arrow">&rarr;</span>
-              </a>
-              <a href="https://cdis.wisc.edu/cdis-student-spotlight-sreya-sarathy/" class="press-row" target="_blank" rel="noopener">
-                <span class="press-row-outlet">UW-Madison CDIS</span>
-                <span class="press-row-title">CDIS Student Spotlight: Sreya Sarathy</span>
-                <span class="press-row-arrow">&rarr;</span>
-              </a>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7308183028554416129/" class="press-row" target="_blank" rel="noopener">
-                <span class="press-row-outlet">LinkedIn</span>
-                <span class="press-row-title">Get to know Sreya</span>
-                <span class="press-row-arrow">&rarr;</span>
-              </a>
-              <a href="https://www.youtube.com/watch?v=IuTcAaK790I" class="press-row" target="_blank" rel="noopener">
-                <span class="press-row-outlet">Podcast Feature</span>
-                <span class="press-row-title">Featured as a guest. Listen to the full episode.</span>
-                <span class="press-row-arrow">&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="about-win-photos">
-            <div class="about-headshot-wrap" style="margin-bottom:1.5rem;">
-              <img src="Sreya Headshot.jpeg" alt="Sreya Sarathy" class="about-headshot" />
-            </div>
-            <div class="win-section-label">Fun facts</div>
-            <div class="fun-facts-photos" style="margin-top:0.75rem;">
-              <div class="fun-fact-card">
-                <img src="matcha.webp" alt="Matcha lover" class="fun-fact-img" />
-                <span class="fun-fact-label">Avid matcha lover</span>
-              </div>
-              <div class="fun-fact-card">
-                <img src="budapest.webp" alt="Travelling in Budapest" class="fun-fact-img" />
-                <span class="fun-fact-label">Avid traveller</span>
-              </div>
-            </div>
-          </div>
+        <div class="win-section-label">Features</div>
+        <div class="feat-list">
+          <a href="https://cdis.wisc.edu/sreya-sarathy-25-talks-mentorship/" class="feat-card" target="_blank" rel="noopener">
+            <span class="feat-outlet">UW-Madison CDIS</span>
+            <span class="feat-title">Sreya Sarathy '25 Talks Mentorship</span>
+            <span class="feat-arrow">&rarr;</span>
+          </a>
+          <a href="https://cdis.wisc.edu/cdis-student-spotlight-sreya-sarathy/" class="feat-card" target="_blank" rel="noopener">
+            <span class="feat-outlet">UW-Madison CDIS</span>
+            <span class="feat-title">CDIS Student Spotlight: Sreya Sarathy</span>
+            <span class="feat-arrow">&rarr;</span>
+          </a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7308183028554416129/" class="feat-card" target="_blank" rel="noopener">
+            <span class="feat-outlet">LinkedIn</span>
+            <span class="feat-title">Get to know Sreya</span>
+            <span class="feat-arrow">&rarr;</span>
+          </a>
         </div>
       </div>
     </div>
