@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0W4NP6W55Y"></script>
   <script>
@@ -29,23 +29,6 @@
 
     <!-- WALLPAPER GRID (subtle) -->
     <div class="desktop-wallpaper" aria-hidden="true"></div>
-
-    <!-- PHOTO WIDGET -->
-    <div class="desktop-widget widget-photos" aria-hidden="true">
-      <div class="widget-photo-stack">
-        <img src="Sreya Headshot.jpeg" alt="" class="widget-photo active" />
-        <img src="matcha.webp" alt="" class="widget-photo" />
-        <img src="budapest.webp" alt="" class="widget-photo" />
-      </div>
-      <div class="widget-photos-footer">
-        <span class="widget-photos-title">Photos</span>
-        <div class="widget-dots">
-          <span class="widget-dot active"></span>
-          <span class="widget-dot"></span>
-          <span class="widget-dot"></span>
-        </div>
-      </div>
-    </div>
 
     <!-- DESKTOP ICONS -->
     <div class="desktop-icons" role="list">
@@ -683,21 +666,6 @@
         if (top) closeWindow(top.id.replace('win-', ''));
       }
     });
-
-    // ---- PHOTO WIDGET ----
-    (function() {
-      const photos = document.querySelectorAll('.widget-photo');
-      const dots = document.querySelectorAll('.widget-dot');
-      if (!photos.length) return;
-      let idx = 0;
-      setInterval(() => {
-        photos[idx].classList.remove('active');
-        dots[idx].classList.remove('active');
-        idx = (idx + 1) % photos.length;
-        photos[idx].classList.add('active');
-        dots[idx].classList.add('active');
-      }, 4000);
-    })();
   </script>
 
 </body>
