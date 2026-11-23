@@ -24,31 +24,28 @@
 </head>
 <body>
 
-  <!-- MENU BAR -->
-  <div class="menubar">
-    <div class="menubar-left">
-      <span class="menubar-brand">Sreya Sarathy</span>
-      <span class="menubar-sep"></span>
-      <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="menubar-item">Writing</a>
-      <span class="menubar-item" data-open="speaking">Speaking</span>
-      <a href="mailto:hisreyasarathy@gmail.com" class="menubar-item">Contact</a>
-    </div>
-    <div class="menubar-right">
-      <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="menubar-icon" title="Substack">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/sreyasarathy" target="_blank" rel="noopener" class="menubar-icon" title="LinkedIn">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <span class="menubar-time" id="menubar-time"></span>
-    </div>
-  </div>
-
   <!-- DESKTOP -->
   <div class="desktop" id="desktop">
 
     <!-- WALLPAPER GRID (subtle) -->
     <div class="desktop-wallpaper" aria-hidden="true"></div>
+
+    <!-- PHOTO WIDGET -->
+    <div class="desktop-widget widget-photos" aria-hidden="true">
+      <div class="widget-photo-stack">
+        <img src="Sreya Headshot.jpeg" alt="" class="widget-photo active" />
+        <img src="matcha.webp" alt="" class="widget-photo" />
+        <img src="budapest.webp" alt="" class="widget-photo" />
+      </div>
+      <div class="widget-photos-footer">
+        <span class="widget-photos-title">Photos</span>
+        <div class="widget-dots">
+          <span class="widget-dot active"></span>
+          <span class="widget-dot"></span>
+          <span class="widget-dot"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- NAMEPLATE -->
     <div class="desktop-nameplate">
@@ -134,7 +131,7 @@
           <button class="win-btn win-min" aria-label="Minimize"></button>
           <button class="win-btn win-max" aria-label="Maximize"></button>
         </div>
-        <span class="win-title">Writing &mdash; sreyasarathy.substack.com</span>
+        <span class="win-title">Writing / sreyasarathy.substack.com</span>
       </div>
       <div class="win-body">
         <div class="win-section-label">How I think about product</div>
@@ -656,16 +653,6 @@
   <div class="win-overlay" id="win-overlay"></div>
 
   <script>
-    // ---- CLOCK ----
-    function updateClock() {
-      const el = document.getElementById('menubar-time');
-      if (!el) return;
-      const now = new Date();
-      el.textContent = now.toLocaleString('en-US', { weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
-    }
-    updateClock();
-    setInterval(updateClock, 10000);
-
     // ---- WINDOWS ----
     let zTop = 200;
 
@@ -729,8 +716,20 @@
       }
     });
 
-    // Menubar speaking link
-    document.querySelector('[data-open="speaking"]').addEventListener('click', () => openWindow('speaking'));
+    // ---- PHOTO WIDGET ----
+    (function() {
+      const photos = document.querySelectorAll('.widget-photo');
+      const dots = document.querySelectorAll('.widget-dot');
+      if (!photos.length) return;
+      let idx = 0;
+      setInterval(() => {
+        photos[idx].classList.remove('active');
+        dots[idx].classList.remove('active');
+        idx = (idx + 1) % photos.length;
+        photos[idx].classList.add('active');
+        dots[idx].classList.add('active');
+      }, 4000);
+    })();
   </script>
 
 </body>

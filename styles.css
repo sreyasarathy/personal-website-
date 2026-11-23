@@ -21,7 +21,7 @@
   --font-display: 'Merriweather', Georgia, serif;
   --font-body: 'Lora', Georgia, serif;
   --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --menubar-h: 28px;
+  --menubar-h: 0px;
   --dock-h: 76px;
   --folder-blue: #2d7dd2;
   --folder-purple: #7c5cbf;
@@ -62,73 +62,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; padding
     linear-gradient(145deg, #bdd4f4 0%, #c8dff8 40%, #d8ecff 100%);
   z-index: 0;
   pointer-events: none;
-}
-
-/* ===== MENU BAR ===== */
-.menubar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--menubar-h);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.25rem;
-  background: rgba(18, 18, 24, 0.78);
-  backdrop-filter: blur(24px) saturate(1.6);
-  -webkit-backdrop-filter: blur(24px) saturate(1.6);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  font-family: var(--font-ui);
-  font-size: 0.78rem;
-}
-
-.menubar-left, .menubar-right {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.menubar-brand {
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.95);
-  letter-spacing: 0.01em;
-}
-
-.menubar-sep {
-  display: inline-block;
-  width: 1px;
-  height: 10px;
-  background: rgba(255,255,255,0.15);
-  margin: 0 0.2rem;
-}
-
-.menubar-item {
-  color: rgba(255,255,255,0.75);
-  opacity: 1;
-  transition: color 0.15s;
-  cursor: pointer;
-  padding: 0 0.3rem;
-}
-
-.menubar-item:hover { color: white; }
-
-.menubar-icon {
-  display: flex;
-  align-items: center;
-  color: rgba(255,255,255,0.65);
-  transition: color 0.15s;
-}
-
-.menubar-icon:hover { color: white; }
-
-.menubar-time {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.75rem;
-  margin-left: 0.4rem;
-  white-space: nowrap;
 }
 
 /* ===== DESKTOP AREA ===== */
@@ -190,6 +123,82 @@ button { background: none; border: none; cursor: pointer; font: inherit; padding
 }
 
 .dh-accent { color: var(--accent); }
+
+/* ===== PHOTO WIDGET ===== */
+.desktop-widget {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.26), 0 2px 8px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.35);
+  user-select: none;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.widget-photos {
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 196px;
+  height: 248px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-photo-stack {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.widget-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.widget-photo.active { opacity: 1; }
+
+.widget-photos-footer {
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: rgba(8, 16, 36, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.widget-photos-title {
+  font-family: var(--font-ui);
+  font-size: 0.69rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.widget-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.widget-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.28);
+  transition: background 0.4s;
+}
+
+.widget-dot.active { background: rgba(255,255,255,0.88); }
 
 /* ===== DESKTOP ICONS ===== */
 .desktop-icons {
@@ -289,8 +298,8 @@ button { background: none; border: none; cursor: pointer; font: inherit; padding
 .di-folder--pink .di-folder-tab  { background: color-mix(in srgb, var(--folder-pink) 85%, #000); }
 .di-folder--pink .di-folder-body { background: var(--folder-pink); }
 
-.di-folder--green .di-folder-tab  { background: color-mix(in srgb, var(--folder-green) 85%, #000); }
-.di-folder--green .di-folder-body { background: var(--folder-green); }
+.di-folder--green .di-folder-tab  { background: #22773c; }
+.di-folder--green .di-folder-body { background: #2d9d50; }
 
 .di-folder-emoji { color: rgba(255,255,255,0.9); }
 
