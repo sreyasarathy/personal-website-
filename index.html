@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0W4NP6W55Y"></script>
   <script>
@@ -29,6 +29,19 @@
 
     <!-- WALLPAPER GRID (subtle) -->
     <div class="desktop-wallpaper" aria-hidden="true"></div>
+
+    <!-- WIDGETS -->
+    <div class="desk-widgets">
+      <div class="desk-widget" data-slideshow>
+        <img src="Sreya Headshot.jpeg" alt="Sreya" class="dw-photo active" style="object-position:center 20%;" />
+        <img src="matcha.webp" alt="Sreya's matcha" class="dw-photo" />
+        <div class="dw-label">Sreya</div>
+      </div>
+      <div class="desk-widget" data-slideshow>
+        <img src="budapest.webp" alt="Budapest" class="dw-photo active" />
+        <div class="dw-label">Travel</div>
+      </div>
+    </div>
 
     <!-- DESKTOP ICONS -->
     <div class="desktop-icons" role="list">
@@ -538,49 +551,6 @@
   <!-- DOCK -->
   <div class="dock" role="navigation" aria-label="Dock">
     <div class="dock-inner">
-      <button class="dock-item" data-open="writing" aria-label="Writing">
-        <div class="dock-icon di-folder di-folder--blue">
-          <div class="di-folder-tab"></div>
-          <div class="di-folder-body"><span class="di-folder-emoji">&#9998;</span></div>
-        </div>
-        <span class="dock-label">Writing</span>
-      </button>
-      <button class="dock-item" data-open="speaking" aria-label="Speaking">
-        <div class="dock-icon di-folder di-folder--purple">
-          <div class="di-folder-tab"></div>
-          <div class="di-folder-body"><span class="di-folder-emoji">&#127908;</span></div>
-        </div>
-        <span class="dock-label">Speaking</span>
-      </button>
-      <button class="dock-item" data-open="brands" aria-label="Brands">
-        <div class="dock-icon di-folder di-folder--teal">
-          <div class="di-folder-tab"></div>
-          <div class="di-folder-body"><span class="di-folder-emoji">&#10022;</span></div>
-        </div>
-        <span class="dock-label">Brands</span>
-      </button>
-      <button class="dock-item" data-open="work" aria-label="Work">
-        <div class="dock-icon di-folder di-folder--orange">
-          <div class="di-folder-tab"></div>
-          <div class="di-folder-body"><span class="di-folder-emoji">&#128187;</span></div>
-        </div>
-        <span class="dock-label">Work</span>
-      </button>
-      <button class="dock-item" data-open="about" aria-label="About">
-        <div class="dock-icon di-folder di-folder--pink">
-          <div class="di-folder-tab"></div>
-          <div class="di-folder-body"><span class="di-folder-emoji">&#9786;</span></div>
-        </div>
-        <span class="dock-label">About</span>
-      </button>
-      <button class="dock-item" data-open="sideprojects" aria-label="Side Projects">
-        <div class="dock-icon di-folder di-folder--green">
-          <div class="di-folder-tab"></div>
-          <div class="di-folder-body"><span class="di-folder-emoji">&#128161;</span></div>
-        </div>
-        <span class="dock-label">Side Projects</span>
-      </button>
-      <div class="dock-divider"></div>
       <a href="https://sreyasarathy.substack.com" target="_blank" rel="noopener" class="dock-item dock-item--link" aria-label="Substack">
         <div class="dock-icon dock-icon--social">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
@@ -665,6 +635,17 @@
         const top = [...document.querySelectorAll('.window.open')].sort((a,b) => parseInt(b.style.zIndex||0) - parseInt(a.style.zIndex||0))[0];
         if (top) closeWindow(top.id.replace('win-', ''));
       }
+    });
+    // ---- WIDGET SLIDESHOWS ----
+    document.querySelectorAll('[data-slideshow]').forEach((el, n) => {
+      const imgs = el.querySelectorAll('.dw-photo');
+      if (imgs.length < 2) return;
+      let i = 0;
+      setTimeout(() => setInterval(() => {
+        imgs[i].classList.remove('active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('active');
+      }, 4500), n * 2200);
     });
   </script>
 
