@@ -1252,3 +1252,9 @@ a.spk-pod:hover { background: rgba(45,125,210,0.06); }
 }
 .desk-widget::after { z-index: 1; height: 45%; background: linear-gradient(transparent, rgba(0,0,0,0.5)); }
 @media (max-width: 760px) { .desk-widget--wide { width: 52vw; } }
+
+.shipped-link {
+  display: inline-block; margin-top: 1.25rem;
+  font-family: var(--font-ui); font-size: 0.85rem; font-weight: 600; color: var(--accent);
+}
+.shipped-link:hover { text-decoration: underline; }
