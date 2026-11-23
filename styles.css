@@ -1295,3 +1295,6 @@ a.spk-pod:hover { background: rgba(45,125,210,0.06); }
   position: relative; z-index: 1; padding: 0 1rem 1rem;
   font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.25; color: #fff;
 }
+
+.flip-tile-front--logo { padding: 1rem; background: #f4f4f4; }
+.flip-logo { width: 100%; height: auto; display: block; }
