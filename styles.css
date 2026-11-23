@@ -1301,3 +1301,5 @@ a.spk-pod:hover { background: rgba(45,125,210,0.06); }
 
 .spk-venues { margin-bottom: 1rem; }
 .spk-campus { font-family: var(--font-body); font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 2rem; }
+
+.spk-pod-ep { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
