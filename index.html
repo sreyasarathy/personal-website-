@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=6" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0W4NP6W55Y"></script>
   <script>
@@ -111,6 +111,8 @@
       </button>
 
     </div>
+
+    <div class="win-overlay" id="win-overlay"></div>
 
     <!-- ============ WINDOWS ============ -->
 
@@ -244,47 +246,73 @@
         <span class="win-title">Speaking</span>
       </div>
       <div class="win-body">
-        <div class="win-section-label">Speaking</div>
-        <h2 class="win-heading">Let's put a<br/><span class="wa">mic on it.</span></h2>
-        <p class="win-sub">I speak on early-career tech, product thinking, and what it looks like to build things when the room doesn't exist yet. University panels, company ERGs, conferences.</p>
-
-        <div class="venues-block" style="margin-top:2rem;">
-          <div class="venues-label">Where I've spoken</div>
-          <div class="venues-list">
-            <span class="venue-chip">SJSU Hoplite</span>
-            <span class="venue-chip">Selected to speak at GHC 2026</span>
-            <span class="venue-chip">Cherielle Hackathon</span>
-            <span class="venue-chip">GirlCon 2026</span>
-            <span class="venue-chip">CS Girlies Annual Hackathon</span>
+        <div class="spk-layout">
+          <div class="spk-intro">
+            <div class="win-section-label">Speaking</div>
+            <h2 class="win-heading">Let's put a<br/><span class="wa">mic on it.</span></h2>
+            <p class="win-sub">I speak on early-career tech, product thinking, and building the room when it doesn't exist yet.</p>
+            <div class="spk-stats">
+              <div><span class="spk-stat-num">5</span><span class="spk-stat-label">stages</span></div>
+              <div><span class="spk-stat-num">3</span><span class="spk-stat-label">podcasts</span></div>
+            </div>
+            <a href="mailto:hisreyasarathy@gmail.com" class="btn-primary">Book me &rarr;</a>
           </div>
-        </div>
 
-        <div class="venues-block" style="margin-top:2rem;">
-          <div class="venues-label">Podcasts</div>
-          <div class="podcast-list">
-            <a href="https://overcommitted.dev/starting-a-software-engineering-career-beating-imposter-syndrome-in-the-ai-era-with-sreya-sarathy/" target="_blank" rel="noopener" class="podcast-row">
-              <div class="podcast-info">
-                <div class="podcast-name">Overcommitted Podcast</div>
-                <div class="podcast-sub">Starting a Software Engineering Career &amp; Beating Imposter Syndrome in the AI Era</div>
+          <div class="spk-main">
+            <div class="spk-group-label">Where I've spoken</div>
+            <div class="spk-venues">
+              <div class="spk-venue spk-venue--feature">
+                <span class="spk-badge">Selected speaker</span>
+                <div class="spk-venue-name">Grace Hopper Celebration 2026</div>
+                <div class="spk-venue-note">The world's largest gathering of women in tech.</div>
               </div>
-              <span class="podcast-arrow">&rarr;</span>
-            </a>
-            <div class="podcast-row podcast-row--plain">
-              <div class="podcast-info">
-                <div class="podcast-name">Tech Functions 101</div>
+              <div class="spk-venue">
+                <span class="spk-badge spk-badge--soft">Workshop</span>
+                <div class="spk-venue-name">GirlCon 2026</div>
+                <div class="spk-venue-note">"What Even Is the Cloud"</div>
+              </div>
+              <div class="spk-venue">
+                <span class="spk-badge spk-badge--soft">Workshop</span>
+                <div class="spk-venue-name">Cherielle Hackathon</div>
+                <div class="spk-venue-note">"How to Stay You in CS When Everyone Around You Looks Different"</div>
+              </div>
+              <div class="spk-venue">
+                <span class="spk-badge spk-badge--soft">Speaker</span>
+                <div class="spk-venue-name">CS Girlies Annual Hackathon</div>
+              </div>
+              <div class="spk-venue">
+                <span class="spk-badge spk-badge--soft">Workshop</span>
+                <div class="spk-venue-name">SJSU Hoplite</div>
+                <div class="spk-venue-note">From academia to the workforce.</div>
               </div>
             </div>
-            <a href="https://open.spotify.com/episode/1GJFstDviejV76pwpUYzvw" target="_blank" rel="noopener" class="podcast-row">
-              <div class="podcast-info">
-                <div class="podcast-name">Spotify Feature</div>
-                <div class="podcast-sub">Listen on Spotify</div>
+
+            <div class="spk-group-label">On the mic</div>
+            <div class="spk-pods">
+              <a href="https://overcommitted.dev/starting-a-software-engineering-career-beating-imposter-syndrome-in-the-ai-era-with-sreya-sarathy/" target="_blank" rel="noopener" class="spk-pod">
+                <span class="spk-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                <span class="spk-pod-text">
+                  <span class="spk-pod-name">Overcommitted</span>
+                  <span class="spk-pod-ep">Starting a software engineering career and beating imposter syndrome in the AI era</span>
+                </span>
+              </a>
+              <a href="https://open.spotify.com/episode/1GJFstDviejV76pwpUYzvw" target="_blank" rel="noopener" class="spk-pod">
+                <span class="spk-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                <span class="spk-pod-text">
+                  <span class="spk-pod-name">Listen on Spotify</span>
+                  <span class="spk-pod-ep">Guest episode</span>
+                </span>
+              </a>
+              <div class="spk-pod spk-pod--static">
+                <span class="spk-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                <span class="spk-pod-text">
+                  <span class="spk-pod-name">Tech Functions 101</span>
+                  <span class="spk-pod-ep">Guest</span>
+                </span>
               </div>
-              <span class="podcast-arrow">&rarr;</span>
-            </a>
+            </div>
           </div>
         </div>
-
-        <a href="mailto:hisreyasarathy@gmail.com" class="btn-primary" style="margin-top:2rem;display:inline-block;">Book me &rarr;</a>
       </div>
     </div>
 
@@ -301,7 +329,7 @@
       <div class="win-body">
         <div class="win-section-label">Collaborations</div>
         <h2 class="win-heading">Partnered<br/><span class="wa">with me.</span></h2>
-        <p class="win-sub">Companies and organizations I've worked with directly, through content, partnerships, and speaking.</p>
+        <p class="win-sub">Brands I've partnered with for content and event partnerships.</p>
 
         <div class="win-flip-grid win-flip-grid--4">
 
@@ -388,47 +416,6 @@
             <div class="work-pill">Full-stack engineering</div>
             <div class="work-pill">0 &rarr; 1 products</div>
             <div class="work-pill">Systems thinking</div>
-          </div>
-        </div>
-
-        <div class="win-section-label" style="margin-top:2.5rem;">Things I've built</div>
-
-        <div class="shipped-grid">
-          <div class="shipped-card shipped-card-featured">
-            <div class="shipped-meta">
-              <span class="shipped-tag">Community Product</span>
-            </div>
-            <h3 class="shipped-title">Recruiting Buddy Initiative</h3>
-            <p class="shipped-problem"><strong>Problem:</strong> Panels give inspiration. They don't give one-on-one support at 11pm when someone's stuck on their resume and their interview is tomorrow morning.</p>
-            <p class="shipped-solution"><strong>What I built:</strong> A peer-matching system inside the community, connecting students who need targeted recruiting help with people a step ahead who've been there. Zero infrastructure cost, high signal.</p>
-            <div class="shipped-metrics">
-              <div class="shipped-metric">
-                <span class="shipped-metric-num">150</span>
-                <span class="shipped-metric-label">registrations (capped)</span>
-              </div>
-              <div class="shipped-metric">
-                <span class="shipped-metric-num">0<span class="accent">→</span>1</span>
-                <span class="shipped-metric-label">built from scratch</span>
-              </div>
-            </div>
-          </div>
-          <div class="shipped-card">
-            <div class="shipped-meta">
-              <span class="shipped-tag">Event Product</span>
-            </div>
-            <h3 class="shipped-title">Sreya's Virtual Panel Series</h3>
-            <p class="shipped-problem"><strong>Problem:</strong> Early-career students needed access to people already in the room, but the existing rooms weren't built for them, and the ones that were didn't exist yet.</p>
-            <p class="shipped-solution"><strong>What I built:</strong> A virtual panel series, free and open, featuring speakers from Apple, Amazon, IBM, Starbucks, Ford, Deloitte.</p>
-            <div class="shipped-metrics">
-              <div class="shipped-metric">
-                <span class="shipped-metric-num">1,500<span class="accent">+</span></span>
-                <span class="shipped-metric-label">registrations</span>
-              </div>
-              <div class="shipped-metric">
-                <span class="shipped-metric-num">12</span>
-                <span class="shipped-metric-label">panels hosted</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -632,8 +619,6 @@
     </div>
   </div>
 
-  <!-- OVERLAY (behind open windows) -->
-  <div class="win-overlay" id="win-overlay"></div>
 
   <script>
     // ---- WINDOWS ----
