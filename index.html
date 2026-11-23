@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0W4NP6W55Y"></script>
   <script>
@@ -33,13 +33,19 @@
     <!-- WIDGETS -->
     <div class="desk-widgets">
       <div class="desk-widget" data-slideshow>
+        <div class="dw-title">Sreya</div>
         <img src="Sreya Headshot.jpeg" alt="Sreya" class="dw-photo active" style="object-position:center 20%;" />
-        <img src="matcha.webp" alt="Sreya's matcha" class="dw-photo" />
-        <div class="dw-label">Sreya</div>
+        <img src="matcha.webp" alt="Sreya at a cafe" class="dw-photo" style="object-position:center 30%;" />
+        <img src="budapest.webp" alt="Sreya in Budapest" class="dw-photo" />
       </div>
-      <div class="desk-widget" data-slideshow>
-        <img src="budapest.webp" alt="Budapest" class="dw-photo active" />
-        <div class="dw-label">Travel</div>
+      <div class="desk-widget desk-widget--wide" data-slideshow>
+        <div class="dw-title">Sreya's interests</div>
+        <img src="matcha-jar.webp" alt="Homemade strawberry matcha" class="dw-photo active" data-caption="Making matcha, trying new recipes" />
+        <img src="nyc.webp" alt="New York skyline at night" class="dw-photo" data-caption="Travelling" style="object-position:center 58%;" />
+        <img src="vinyl.webp" alt="Record player" class="dw-photo" data-caption="Music, specifically collecting vinyls" />
+        <img src="vienna.webp" alt="Vienna" class="dw-photo" data-caption="Travelling, truly" />
+        <img src="pool.webp" alt="Playing pool" class="dw-photo" data-caption="Trying new things, even though I'm really bad at them" />
+        <div class="dw-caption">Making matcha, trying new recipes</div>
       </div>
     </div>
 
@@ -645,6 +651,11 @@
         imgs[i].classList.remove('active');
         i = (i + 1) % imgs.length;
         imgs[i].classList.add('active');
+        const cap = el.querySelector('.dw-caption');
+        if (cap && imgs[i].dataset.caption) {
+          cap.classList.add('fade');
+          setTimeout(() => { cap.textContent = imgs[i].dataset.caption; cap.classList.remove('fade'); }, 400);
+        }
       }, 4500), n * 2200);
     });
   </script>
